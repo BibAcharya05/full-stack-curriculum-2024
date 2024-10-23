@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping List Example</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="container">
@@ -19,30 +20,6 @@
     </div>
 
     <script>
-
-
-      let shoppingList = JSON.parse(localStorage.getItem)
-      console.log(shoppingList)
-      shoppingList.forEach(Element =>{
-        addItem(element)
-      })
-
-
-      let shoppingButton = document.querySelector("button")
-
-      shoppingButton.addEventListener("click",createListItem)
-
-      function createListItem()
-      {
-        const input = document.querySelector("#item");
-
-        const inputText = input.value
-
-        addItem(inputText);
-        input.value = "";
-        input.focus();
-
-      }
 
       //conveniently done for you!
       function addItem(text) {
@@ -63,12 +40,6 @@
         li.appendChild(deleteButton);
         li.appendChild(saveButton);
         
-        deleteButton.addEventListener("click", ()=> {
-          list.removeChild(li)
-        })
-        saveButton.addEventListener("click", ()=> {
-          consle.log("Save button was clicked!");
-        })
       }
 
     </script>
